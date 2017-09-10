@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<div id='wx_pic' style='margin:0 auto;display:none;'>
+<img src='photo.jpg' />
+</div>
+    <meta charset="utf-8">
+    <title>我要我们在一起</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="full-screen" content="true"/>
+    <meta name="screen-orientation" content="portrait"/>
+    <meta name="x5-fullscreen" content="true"/>
+    <meta name="360-fullscreen" content="true"/>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+   	<link rel="stylesheet" type="text/css" href="main.css"/>
+ 
+</head>
+<body>
+<div style="position:relative;" id="gameDiv"></div>
+<script>var document_class = "Main";</script><!--这部分内容在编译时会被替换，要修改文档类，请到工程目录下的egretProperties.json内编辑。-->
+<script src="launcher/egret_require.js"></script>
+<script src="launcher/egret_loader.js"></script>
+<script>
+	window.addEventListener("orientationchange",setRem);
+	window.addEventListener("resize",setRem);
+	setRem();
+	function setRem(){
+		var dom=document.documentElement;
+		var domWidth=dom.getBoundingClientRect().width;
+		dom.style.fontSize=domWidth/16+"px";
+	}
+</script>
+<script>
+    //判断是否支持canvas
+    var support = [].map && document.createElement("canvas").getContext;
+    var src=["game-min.js"];
+    if (support) {
+        egret_h5.preloadScript(src,"launcher/");
+        egret_h5.startLoading();
+        function start(){
+            restartGame();
+        }
+    }
+    else {
+        alert("Egret 不支持您当前的浏览器")
+    }
+</script>
+</body>
+</html>

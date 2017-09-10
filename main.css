@@ -1,0 +1,66 @@
+body {
+  text-align: center;
+  background: #ffffff;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+html {
+  -ms-touch-action: none;
+  /* Direct all pointer events to JavaScript code. */
+  overflow: hidden;
+}
+canvas {
+  display: block;
+  position: absolute;
+  margin: 0 auto;
+  padding: 0;
+  border: 0;
+}
+.layer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+.info-box {
+  width: 10.50666667rem;
+  height: 5.33333333rem;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-left: -5.25333333rem;
+  margin-top: -2.66666667rem;
+  border-radius: 0.21333333rem;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.4);
+}
+.info-con {
+  line-height: 1.06666667rem;
+  font-size: 0.58666667rem;
+  padding: 0.72rem 1.22666667rem 0.61333333rem;
+}
+.info-btns {
+  border-top: 1px solid #dedede;
+  height: 1.81333333rem;
+  width: 100%;
+  font-size: 0px;
+}
+.info-btns a {
+  display: inline-block;
+  width: 50%;
+  line-height: 1.81333333rem;
+  color: #fd9c06;
+  text-align: center;
+  font-size: 0.53333333rem;
+  box-sizing: border-box;
+}
+.info-btns a + a {
+  border-left: 1px solid #dedede;
+}
